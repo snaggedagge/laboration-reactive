@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon >menu</mat-icon>
+    </button>
+    <h1>Generic WebShop</h1>
+
+    <span class="spacer"></span>
+
+    <mat-checkbox class="example-margin" (change)="ngOnInit()" [(ngModel)]="useReactiveStream">Use Reactive Stream</mat-checkbox>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<ng-container *ngIf="products">
+  <mat-card class="meme-card" *ngFor="let product of products">
+    <mat-card-header>
+      <mat-card-title>{{product.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="product.image">
+    <mat-card-content>
+      <p>
+        {{product.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button>Order now for only <strong>{{product.price}}€!</strong></button>
+    </mat-card-actions>
+  </mat-card>
+</ng-container>

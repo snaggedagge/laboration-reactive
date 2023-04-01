@@ -1,0 +1,23 @@
+
+.meme-card {
+  max-width: 300px;
+  margin: 2em;
+  float: left;
+}
+
+
+.spacer {
+  flex: 0.96 1 auto;
+}
+
+::ng-deep.mat-menu-panel {
+  max-width: none !important;
+}
+
+.center {
+  padding-top: 50px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
